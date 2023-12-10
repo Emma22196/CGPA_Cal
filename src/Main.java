@@ -8,7 +8,7 @@ public class Main {
 
         System.out.print("Enter the number of courses: ");
         int numCourses = scanner.nextInt();
-        scanner.nextLine(); // Consume the newline character
+        scanner.nextLine(); 
 
         Course[] courses = new Course[numCourses];
 
@@ -19,21 +19,21 @@ public class Main {
 
             System.out.print("Enter the course unit for " + courseName + ": ");
             int courseUnit = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character
+            scanner.nextLine();
 
             System.out.print("Enter your Score for " + courseName + ": ");
             int score = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character
+            scanner.nextLine(); 
 
             courses[i] = new Course(courseName, courseUnit, score);
         }
 
-        // Display the table header
+        // Result Header Display
         System.out.printf("%-20s | %-12s | %-5s | %-15s%n",
-                "Course Code", "Course Unit", "Grade", "Grade Points");
+                "Course & Code", "Course Unit", "Grade", "Grade-Units");
         System.out.println("-".repeat(55));
 
-        // Calculate GPA and display the result
+        // Calculate GPA and display
         double totalGradePoints = 0;
         int totalCourseUnits = 0;
 
